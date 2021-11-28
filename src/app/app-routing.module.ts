@@ -4,6 +4,7 @@ import { CadastroComponent } from "./layout/cadastro/cadastro.component";
 import { ListagemBabaComponent } from "./layout/listagem-baba/listagem-baba.component";
 import { CarouselzitoComponent } from "./layout/carouselzito/carouselzito.component";
 import { MenuComponent} from "./layout/menu/menu.component";
+import {PadrzitoComponent} from "./layout/padrzito/padrzito.component";
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    component:MenuComponent
+    component:PadrzitoComponent
   }
 ];
 

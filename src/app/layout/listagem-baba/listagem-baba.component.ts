@@ -3,6 +3,7 @@ import {Babysitter} from "../../../shared/model/babysitter";
 import {BabysitterService} from "../../../shared/services/babysitter.service";
 import {Router} from "@angular/router";
 
+
 @Component({
   selector: 'app-listagem-baba',
   templateUrl: './listagem-baba.component.html',
@@ -11,7 +12,7 @@ import {Router} from "@angular/router";
 export class ListagemBabaComponent implements OnInit {
 
   babysitters: Array<Babysitter>;
-
+  rating = 0;
   longText = `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
   from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
   originally bred for hunting.`;

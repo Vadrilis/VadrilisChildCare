@@ -35,6 +35,10 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {RouterModule} from "@angular/router";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {NgbRatingModule} from "@ng-bootstrap/ng-bootstrap";
+import { PadrzitoComponent } from './padrzito/padrzito.component';
 
 @NgModule({
   declarations: [
@@ -47,8 +51,9 @@ import {RouterModule} from "@angular/router";
     CadastroComponent,
     ListagemBabaComponent,
     PartezitaComponent,
+    PadrzitoComponent
   ],
-  exports: [MenuComponent, MapazitoComponent, CarouselzitoComponent, CarouseldasbbstrsComponent, FooterzitoComponent, HomezitoComponent, CadastroComponent, ListagemBabaComponent,PartezitaComponent],
+  exports: [MenuComponent, MapazitoComponent, CarouselzitoComponent, CarouseldasbbstrsComponent, FooterzitoComponent, HomezitoComponent, CadastroComponent, ListagemBabaComponent,PartezitaComponent, PadrzitoComponent],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
@@ -75,7 +80,10 @@ import {RouterModule} from "@angular/router";
     MatNativeDateModule,
     ReactiveFormsModule,
     MatDatepickerModule,
-    RouterModule
+    RouterModule,
+    MatDividerModule,
+    MatProgressBarModule,
+    NgbRatingModule
   ],
   providers: [],
 })

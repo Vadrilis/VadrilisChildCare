@@ -46,6 +46,14 @@
     <p>This card has divider and indeterminate progress as footer</p>
     <p>{{ longText }}</p>
   </mat-card-content>
+  <ngb-rating [max]="5" [(rate)]="rating" [readonly]="false"></ngb-rating>
+  <!--     <ngb-rating [(rate)]="rating">
+      <ng-template let-fill="fill" let-index="index">
+        <span class="star" [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
+      </ng-template>
+    </ngb-rating>
+
+    <p>Rate: <strong>{{rating}}</strong></p>-->
   <mat-divider inset></mat-divider>
   <mat-card-actions>
     <button mat-button>LIKE</button>

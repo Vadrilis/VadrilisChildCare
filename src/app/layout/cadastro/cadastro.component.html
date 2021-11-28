@@ -6,7 +6,10 @@
         <mat-tab label="Babá">
           <mat-card-content>
             <form action="">
-
+              <mat-divider> </mat-divider>
+              <h4 class="separandito">LOGIN</h4>
+              <mat-divider> </mat-divider>
+              <br>
               <mat-form-field>
                 <input
                   matInput
@@ -42,7 +45,11 @@
                 </mat-error>-->
                 <mat-icon matSuffix>lock</mat-icon>
               </mat-form-field>
-
+              <br>
+              <mat-divider> </mat-divider>
+              <h4 class="separandito">PESSOAL</h4>
+              <mat-divider> </mat-divider>
+              <br>
               <mat-form-field>
                 <input
                   matInput
@@ -88,6 +95,22 @@
                      #telbaba="ngModel"-->
               <mat-icon matSuffix>phone</mat-icon>
             </mat-form-field>
+            <mat-form-field>
+              <mat-label>Data de aniversário</mat-label>
+              <input matInput [matDatepicker]="picker"
+                     [(ngModel)]="babysitter.dataAniversario"
+                     required>
+              <!--name="dataanivbaba"
+              ngModel
+              #dataanivbaba="ngModel"-->
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+              <br>
+              <mat-divider> </mat-divider>
+              <h4 class="separandito">LOCALIZAÇÃO</h4>
+              <mat-divider> </mat-divider>
+              <br>
             <mat-form-field class="example-full-width">
               <mat-label>CEP</mat-label>
               <input matInput
@@ -124,17 +147,11 @@
                      #complbaba="ngModel"-->
               <mat-icon matSuffix>9mp</mat-icon>
             </mat-form-field>
-            <mat-form-field>
-              <mat-label>Data de aniversário</mat-label>
-              <input matInput [matDatepicker]="picker"
-                     [(ngModel)]="babysitter.dataAniversario"
-                     required>
-                     <!--name="dataanivbaba"
-                     ngModel
-                     #dataanivbaba="ngModel"-->
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
+              <br>
+              <mat-divider> </mat-divider>
+              <h4 class="separandito">PERFIL</h4>
+              <mat-divider> </mat-divider>
+              <br>
             <mat-form-field class="example-full-width">
               <textarea matInput placeholder="Descrição"></textarea>
             </mat-form-field>
@@ -151,6 +168,10 @@
       <mat-tab label="Responsável">
         <mat-card-content>
           <form action="">
+            <mat-divider> </mat-divider>
+            <h4 class="separandito">LOGIN</h4>
+            <mat-divider> </mat-divider>
+            <br>
             <mat-form-field>
               <input
                 matInput
@@ -182,6 +203,11 @@
               </mat-error>-->
               <mat-icon matSuffix>lock</mat-icon>
             </mat-form-field>
+            <br>
+            <mat-divider> </mat-divider>
+            <h4 class="separandito">PESSOAL</h4>
+            <mat-divider> </mat-divider>
+            <br>
             <mat-form-field>
               <input
                 matInput
@@ -211,7 +237,6 @@
               </mat-error>-->
               <mat-icon matSuffix>contact_mail</mat-icon>
             </mat-form-field>
-
             <mat-form-field class="example-full-width">
               <mat-label>Telefone</mat-label>
               <span matPrefix>+55 83 &nbsp;</span>
@@ -224,6 +249,21 @@
                      #telresp="ngModel"-->
               <mat-icon matSuffix>phone</mat-icon>
             </mat-form-field>
+            <mat-form-field>
+              <mat-label>Data de aniversário</mat-label>
+              <input matInput [matDatepicker]="picker"
+                     required>
+              <!--name="dataanivresp"
+              ngModel
+              #dataanivresp="ngModel"-->
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <br>
+            <mat-divider> </mat-divider>
+            <h4 class="separandito">ENDEREÇO</h4>
+            <mat-divider> </mat-divider>
+            <br>
             <mat-form-field class="example-full-width">
               <mat-label>CEP</mat-label>
               <input matInput
@@ -257,17 +297,6 @@
                      ngModel
                      #complresp="ngModel"-->
               <mat-icon matSuffix>9mp</mat-icon>
-            </mat-form-field>
-
-            <mat-form-field>
-              <mat-label>Data de aniversário</mat-label>
-              <input matInput [matDatepicker]="picker"
-                     required>
-                     <!--name="dataanivresp"
-                     ngModel
-                     #dataanivresp="ngModel"-->
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
               <button
                 mat-raised-button
