@@ -1,10 +1,10 @@
 export class Crianca{
-  private _nome: string;
-  private _dataAniversario: Date;
+  nome: string;
+  dataAniversario: Date;
 
-  constructor(nome:string) {
-    this._nome = nome;
-    this._dataAniversario = new Date();
+  /*constructor(nome:string) {
+    this.nome = nome;
+    this.dataAniversario = new Date();
   }
 
   get nome(): string {
@@ -22,4 +22,5 @@ export class Crianca{
   set dataAniversario(value: Date) {
     this._dataAniversario = value;
   }
+*/
 }

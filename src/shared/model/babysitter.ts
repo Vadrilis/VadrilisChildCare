@@ -1,19 +1,31 @@
 import {Crianca} from "./crianca";
+import {Avaliacao} from "./avaliacao";
 
 export class Babysitter {
-  private _nome: string;
-  private _cpf: string;
-  private _dataAniversario: Date;
-  private _telefone: string;
-  private _cepNumCompl: string;
-  private _descricao: string;
+  nome: string;
+  cpf: string;
+  dataAniversario: Date;
+  telefone: string;
+  cep: string;
+  num: string;
+  complemento:string;
+  descricao: string;
+  emailz: string;
+  senha: string;
+  avaliacoes: Array<Avaliacao>;
 
-  constructor(nome:string, cpf:string, telefone:string, cepNumCompl:string) {
-    this._nome = nome;
-    this._cpf = cpf;
-    this._telefone = telefone;
-    this._cepNumCompl = cepNumCompl;
-    this._dataAniversario = new Date();
+  /*constructor(emailz:string, senha:string, nome:string, cpf:string, telefone:string, cep:string,  num: string, complemento:string, dataAniversario: Date, descricao:string ) {
+    this.emailz = emailz;
+    this.senha= senha;
+    this.nome = nome;
+    this.cpf = cpf;
+    this.telefone = telefone;
+    this.cep = cep;
+    this.num = num;
+    this.complemento = complemento;
+    this.dataAniversario = dataAniversario;
+    this.avaliacoes = [];
+    this.descricao = descricao;
   }
 
 
@@ -49,12 +61,28 @@ export class Babysitter {
     this._telefone = value;
   }
 
-  get cepNumCompl(): string {
-    return this._cepNumCompl;
+  get cep(): string {
+    return this._cep;
   }
 
-  set cepNumCompl(value: string) {
-    this._cepNumCompl = value;
+  set cep(value: string) {
+    this._cep = value;
+  }
+
+  get num(): string {
+    return this._num;
+  }
+
+  set num(value: string) {
+    this._num = value;
+  }
+
+  get complemento(): string {
+    return this._complemento;
+  }
+
+  set complemento(value: string) {
+    this._complemento = value;
   }
 
   get descricao(): string {
@@ -64,4 +92,20 @@ export class Babysitter {
   set descricao(value: string) {
     this._descricao = value;
   }
+
+  get email(): string {
+    return this._email;
+  }
+
+  set email(value: string) {
+    this._email = value;
+  }
+
+  get senha(): string {
+    return this._senha;
+  }
+
+  set senha(value: string) {
+    this._senha = value;
+  }*/
 }

@@ -1,0 +1,285 @@
+<div>
+  <div class="cdt-page">
+    <mat-card class="mat-elevation-z12">
+      <mat-card-title style="text-align:center;">Cadastro</mat-card-title>
+      <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+        <mat-tab label="Babá">
+          <mat-card-content>
+            <form action="">
+
+              <mat-form-field>
+                <input
+                  matInput
+                  [(ngModel)]="babysitter.emailz"
+                  placeholder="Email"
+                  required
+                  >
+                  <!--name="emailbaba"
+                  ngModel
+                  #emailbaba="ngModel"
+                <mat-error *ngIf="emailbaba.invalid">Informe um email válido</mat-error>-->
+                <mat-icon matSuffix>email</mat-icon>
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                  matInput
+                  [(ngModel)]="babysitter.senha"
+                  placeholder="Senha"
+                  type="password"
+                  required
+                  minlength="5">
+                  <!--name="senhazitababa"
+                  ngModel
+                  #senhazitababa="ngModel"
+                <mat-error
+                  *ngIf="senhazitababa.errors && senhazitababa.errors.required">
+                  Informe uma senha válida
+                </mat-error>
+                <mat-error
+                  *ngIf="senhazitababa.errors && senhazitababa.errors.minlength">
+                  A senha deve ter no mínimo 5
+                </mat-error>-->
+                <mat-icon matSuffix>lock</mat-icon>
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                  matInput
+                  [(ngModel)]="babysitter.nome"
+                  placeholder="Nome completo"
+                  required>
+                <!--name="usernamebaba"
+                ngModel
+                #usernamebaba="ngModel"
+              <mat-error
+                *ngIf="usernamebaba.invalid">
+                Nome é obrigatorio
+              </mat-error>-->
+              <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                [(ngModel)]="babysitter.cpf"
+                placeholder="123.456.789-01"
+                required>
+                <!--name="cpfzitobaba"
+                ngModel
+                #cpfzitobaba="ngModel"
+              <mat-error
+                *ngIf="cpfzitobaba.invalid">
+                CPF é obrigatorio
+              </mat-error>-->
+              <mat-icon matSuffix>contact_mail</mat-icon>
+
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Telefone</mat-label>
+              <span matPrefix>+55 83 &nbsp;</span>
+              <input type="tel"
+                     matInput
+                     [(ngModel)]="babysitter.telefone"
+                     placeholder="987123456"
+                     required>
+                     <!--name="telbaba"
+                     ngModel
+                     #telbaba="ngModel"-->
+              <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>CEP</mat-label>
+              <input matInput
+                     [(ngModel)]="babysitter.cep"
+                     maxlength="8"
+                     placeholder="Ex. 58300590"
+                     required>
+                     <!--name="cepbaba"
+                     ngModel
+                     #cepbaba="ngModel"
+              <mat-hint align="end">{{cepbaba.value.length}} / 8</mat-hint>-->
+              <mat-icon matSuffix>cottage</mat-icon>
+
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Número</mat-label>
+              <input matInput
+                     [(ngModel)]="babysitter.num"
+                     placeholder="Ex. 100"
+                     required>
+                     <!--name="numbaba"
+                     ngModel
+                     #numbaba="ngModel"-->
+              <mat-icon matSuffix>pin</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Complemento</mat-label>
+              <input matInput
+                     [(ngModel)]="babysitter.complemento"
+                     placeholder="Ex. Apto 90 Bloco A"
+                     required>
+                     <!--name="complbaba"
+                     ngModel
+                     #complbaba="ngModel"-->
+              <mat-icon matSuffix>9mp</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Data de aniversário</mat-label>
+              <input matInput [matDatepicker]="picker"
+                     [(ngModel)]="babysitter.dataAniversario"
+                     required>
+                     <!--name="dataanivbaba"
+                     ngModel
+                     #dataanivbaba="ngModel"-->
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <textarea matInput placeholder="Descrição"></textarea>
+            </mat-form-field>
+            <mat-checkbox color="warn">Lembrar-se</mat-checkbox>
+            <button
+              mat-raised-button
+              color="primary"
+              class="cdt-button" (click)="inserirBabysitter()">
+              Cadastrar
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-tab>
+      <mat-tab label="Responsável">
+        <mat-card-content>
+          <form action="">
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Email"
+                required>
+                <!--name="emailresp"
+                ngModel
+                #emailresp="ngModel"
+              <mat-error *ngIf="emailresp.invalid">Informe um email válido</mat-error>-->
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Senha"
+                type="password"
+                required
+                minlength="5">
+                <!--name="senhazitaresp"
+                ngModel
+                #senhazitaresp="ngModel"
+              <mat-error
+                *ngIf="senhazitaresp.errors && senhazitaresp.errors.required">
+                Informe uma senha válida
+              </mat-error>
+              <mat-error
+                *ngIf="senhazitaresp.errors && senhazitaresp.errors.minlength">
+                A senha deve ter no mínimo 5
+              </mat-error>-->
+              <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Nome completo"
+                required>
+                <!--name="usernameresp"
+                ngModel
+                #usernameresp="ngModel"
+                            <mat-error
+                *ngIf="usernameresp.invalid">
+                Nome é obrigatorio
+              </mat-error>-->
+              <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="123.456.789-01"
+                required>
+                <!--name="cpfzitoresp"
+                ngModel
+                #cpfzitoresp="ngModel"
+                            <mat-error
+                *ngIf="cpfzitoresp.invalid">
+                CPF é obrigatorio
+              </mat-error>-->
+              <mat-icon matSuffix>contact_mail</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-label>Telefone</mat-label>
+              <span matPrefix>+55 83 &nbsp;</span>
+              <input type="tel"
+                     matInput
+                     placeholder="987123456"
+                     required>
+                     <!--name="telresp"
+                     ngModel
+                     #telresp="ngModel"-->
+              <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>CEP</mat-label>
+              <input matInput
+                     maxlength="8"
+                     placeholder="Ex. 58300590"
+                     required>
+                     <!--name="cepresp"
+                     ngModel
+                     #cepresp="ngModel"
+                     <mat-hint align="end">{{cepresp.value.length}} / 8</mat-hint>-->
+              <mat-icon matSuffix>cottage</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-label>Número</mat-label>
+              <input matInput
+                     placeholder="Ex. 100"
+                     required>
+                     <!--name="numresp"
+                     ngModel
+                     #numresp="ngModel"-->
+              <mat-icon matSuffix>pin</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-label>Complemento</mat-label>
+              <input matInput
+                     placeholder="Ex. Apto 90 Bloco A"
+                     required>
+                     <!--name="complresp"
+                     ngModel
+                     #complresp="ngModel"-->
+              <mat-icon matSuffix>9mp</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Data de aniversário</mat-label>
+              <input matInput [matDatepicker]="picker"
+                     required>
+                     <!--name="dataanivresp"
+                     ngModel
+                     #dataanivresp="ngModel"-->
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <button
+              mat-raised-button
+              color="primary"
+              class="cdt-button">
+              Cadastrar
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+  </div>
+</div>
+

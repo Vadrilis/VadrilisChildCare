@@ -10,7 +10,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatIconModule} from "@angular/material/icon";
 import {LayoutModule} from "./layout/layout.module";
-
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -26,7 +26,8 @@ import {LayoutModule} from "./layout/layout.module";
     MatFormFieldModule,
     MatCardModule,
     MatIconModule,
-    LayoutModule
+    LayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

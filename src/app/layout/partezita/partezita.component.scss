@@ -1,0 +1,27 @@
+.example-card {
+  max-width: 350px;
+  margin-bottom: 8px;
+}
+
+.partz{
+  background-image: url("https://github.com/lAlissial/jsonzitotwo/blob/main/imgpsite.jpg?raw=true");
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+
+}
+h1, h4 {
+  color:white !important;
+  font-family: "Century Gothic";
+  text-align: center;
+}
+
+.cardizititos{
+  display: flex;
+  justify-content: space-around;
+}
+
+mat-card{
+  flex: 1 1 0px;
+}
+
+

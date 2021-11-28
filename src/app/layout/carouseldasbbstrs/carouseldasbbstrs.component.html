@@ -1,0 +1,25 @@
+<mdb-carousel [controls]="true" class="carousel-multi-item multi-animation" [animation]="'slide'">
+  <mdb-carousel-item *ngFor="let item of slides; let i = index">
+    <div class="col-md-4" *ngFor="let card of item; let cardIndex = index">
+      <div class="card">
+        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+          <img [src]="card.img" alt="Card image cap" class="img-fluid" />
+          <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{card.title}}</h5>
+        </div>
+        <p class="card-text">{{card.description}}</p>
+        <a href="#!" class="btn btn-primary">{{card.buttonText}}</a>
+      </div>
+    </div>
+  </mdb-carousel-item>
+</mdb-carousel>
+
+
+
+
+
+
