@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from "./layout/cadastro/cadastro.component";
 import { ListagemBabaComponent } from "./layout/listagem-baba/listagem-baba.component";
 import { CarouselzitoComponent } from "./layout/carouselzito/carouselzito.component";
+import { MenuComponent} from "./layout/menu/menu.component";
 
 const routes: Routes = [
   {
@@ -15,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    component:CarouselzitoComponent
+    component:MenuComponent
   }
 ];
 
