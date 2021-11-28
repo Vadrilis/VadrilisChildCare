@@ -1,3 +1,21 @@
+<div fxLayout="row wrap" fxLayout.lt-nd="column" class="cardzito">
+  <mat-card  *ngFor="let babysitter of babysitters" class="example-card">
+    <mat-card-subtitle>Paraíba</mat-card-subtitle>
+    <mat-card-title>{{ babysitter.nome }}</mat-card-title>
+    <mat-card-content>
+      <p>{{ babysitter.descricao}}</p>
+    </mat-card-content>
+    <ngb-rating [max]="5" [(rate)]="rating" [readonly]="false"></ngb-rating>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions>
+      <button mat-button>MAIS</button>
+      <button mat-button>ESCOLHER</button>
+    </mat-card-actions>
+    <mat-card-footer>
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+</div>
 <!--<div fxLayout="row wrap" fxLayout.lt-nd="column" class="cardzito">
   <mat-card *ngFor="let usuario of usuarios" class="mat-card-simples">
     <mat-card-header>
@@ -14,9 +32,9 @@
       blaBlablabla bla
     </mat-card-content>
   </mat-card>
-</div>-->
+</div>
 
-<!--<div class="card mb-3" style="max-width: 540px;">
+<div class="card mb-3" style="max-width: 540px;">
     <div class="row g-0">
       <div class="col-md-4">
         <img
@@ -39,27 +57,4 @@
       </div>
     </div>
 </div>-->
-<mat-card class="example-card">
-  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-  <mat-card-title>Shiba Inu</mat-card-title>
-  <mat-card-content>
-    <p>This card has divider and indeterminate progress as footer</p>
-    <p>{{ longText }}</p>
-  </mat-card-content>
-  <ngb-rating [max]="5" [(rate)]="rating" [readonly]="false"></ngb-rating>
-  <!--     <ngb-rating [(rate)]="rating">
-      <ng-template let-fill="fill" let-index="index">
-        <span class="star" [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
-      </ng-template>
-    </ngb-rating>
 
-    <p>Rate: <strong>{{rating}}</strong></p>-->
-  <mat-divider inset></mat-divider>
-  <mat-card-actions>
-    <button mat-button>MAIS</button>
-    <button mat-button>ESCOLHER</button>
-  </mat-card-actions>
-  <mat-card-footer>
-    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-  </mat-card-footer>
-</mat-card>

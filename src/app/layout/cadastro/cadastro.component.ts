@@ -11,12 +11,21 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class CadastroComponent implements OnInit {
 
   babysitter: Babysitter;
-
+  /////////////////////////////
+  babysitters: Array<Babysitter>;
+  rating = 0;
+  /////////////////////////////
   constructor(private babysitterService: BabysitterService, private rotaAtual: ActivatedRoute, private roteador:Router) {
     this.babysitter = new Babysitter();
   }
 
   ngOnInit(): void {
+    this.babysitterService.listar().subscribe(
+      babysittersz => this.babysitters = babysittersz,
+      erro => {
+        alert(erro.message);
+      }
+    );
   }
 
   inserirBabysitter():void {
@@ -25,9 +34,12 @@ export class CadastroComponent implements OnInit {
         babysitterAlterada => console.log(babysitterAlterada)
       );
     } else{}*/
+    this.babysitters.push(this.babysitter)
     this.babysitterService.inserir(this.babysitter).subscribe(
       babysitterInserida=> console.log(babysitterInserida)
     );
 
   }
+
+
 }

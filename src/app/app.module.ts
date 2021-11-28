@@ -11,6 +11,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatIconModule} from "@angular/material/icon";
 import {LayoutModule} from "./layout/layout.module";
 import {HttpClientModule} from "@angular/common/http";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import {HttpClientModule} from "@angular/common/http";
     MatCardModule,
     MatIconModule,
     LayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
