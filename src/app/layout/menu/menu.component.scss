@@ -1,8 +1,10 @@
 .menu-background {
-  background: #7C4DFF;//rgba(167, 135, 255, .5);
+  background: #AA59EB;//rgba(167, 135, 255, .5);
   //background-image: linear-gradient(#c299ff, white);
   height: 40px;
-  z-index: 10 !important;
+  //z-index: 10 !important;
+  display: flex;
+  //flex-direction: column;
 }
 
 #loginz {

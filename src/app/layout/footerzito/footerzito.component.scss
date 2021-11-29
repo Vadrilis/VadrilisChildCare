@@ -6,15 +6,24 @@ footer {
   flex: 0 0 auto;
   width: 40%;
 }
-.col-md-5 {
+/*.col-md-5 {
   flex: 0 0 auto;
   width: 60%;
 }
 
 .col-md-5 a {
   margin-right: 145px;
+}*/
+.geraliconz{
+  display: flex;
+  justify-content: space-around;
+}
+
+.ajtd{
+  flex: 1 1 0px;
 }
 
 i {
   font-size: 17px;
 }
+

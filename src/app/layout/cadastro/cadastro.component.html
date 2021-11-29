@@ -320,25 +320,60 @@
   </div>
 </div>
 
-<div fxLayout="row wrap" fxLayout.lt-nd="column" class="cardzito">
-  <mat-card  *ngFor="let babysitter of babysitters" class="cardjuk">
-    <mat-card-subtitle>Paraíba</mat-card-subtitle>
-    <mat-card-title>{{ babysitter.nome }}</mat-card-title>
-    <mat-card-content>
-      <p>{{ babysitter.descricao}}</p>
-    </mat-card-content>
-    <ngb-rating [max]="5" [(rate)]="rating" [readonly]="false"></ngb-rating>
-    <mat-divider inset></mat-divider>
-    <mat-card-actions>
-      <button mat-button>MAIS</button>
-      <button mat-button>ESCOLHER</button>
-    </mat-card-actions>
-    <mat-card-footer>
-      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-    </mat-card-footer>
-  </mat-card>
-</div>
 
+<div class="lilaszito">
+  <div class="container-fluid searchpage">
+    <div class="row">
+      <div class="col-lg-8 col-xl-6 results">
+        <article>
+          <h1 class="ajkt" id="listagemzita">ENCONTRE UMA BABÁ</h1>
+          <div class="profile-cards-wrapper">
+            <div class="cardszitos">
+              <mat-card  *ngFor="let babysitter of babysitters" class="cardjuk">
+                <mat-card-title-group>
+                  <mat-card-subtitle>Paraíba</mat-card-subtitle>
+                  <mat-card-title>{{ babysitter.nome }}</mat-card-title>
+                  <img mat-card-sm-image src="https://github.com/lAlissial/jsonzitotwo/blob/main/iconbaba.jfif?raw=true" >
+                </mat-card-title-group>
+                <mat-card-content>
+                  <p>{{ babysitter.descricao}}</p>
+                </mat-card-content>
+                <ngb-rating [max]="5" [(rate)]="rating" [readonly]="false"></ngb-rating>
+                <mat-divider inset></mat-divider>
+                <mat-card-actions>
+                  <button mat-button>MAIS</button>
+                  <button mat-button>ESCOLHER</button>
+                </mat-card-actions>
+                <mat-card-footer>
+                  <mat-progress-bar mode="determinate"></mat-progress-bar>
+                </mat-card-footer>
+              </mat-card>
+            </div>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </article>
+      </div>
+
+      <app-mapazito></app-mapazito>
+    </div>
+  </div>
+</div>
 
 
 

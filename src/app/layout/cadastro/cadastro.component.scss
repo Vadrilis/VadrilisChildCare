@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
 .cdt-page {
   //top: 0;
   //margin: 0;
@@ -55,18 +57,58 @@ mat-form-field mat-icon {
 }
 
 .colocbakg{
-  padding-top: 0px;
+  padding-top: 10px;
   margin-top: 0px;
   background-image: url("https://github.com/lAlissial/jsonzitotwo/blob/main/imagempsite3.jpg?raw=true");
+  background-size: 2000px;
+  //background-position-x: center;
+  //background-position-y: center;
+  padding-bottom: 10px;
+  //margin-bottom: 10px;
+}
+.ajkt{
+  margin-top: 25px;
+  text-align: center;
+  font-size:40px;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 // LISTAGEM
 .cardjuk {
-  max-width: 100px;
+  //display:flex;
+  width: 50px;
 }
 
 ngb-rating {
   color: #FFC107;
   font-size: 30px;
+}
+
+.lilaszito{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #eae1fa;
+}
+
+.col-xl-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.row {
+  flex-shrink: 0;
+  margin-top: var(--bs-gutter-y);
+  max-width: 100%;
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  width: 100%;
+}
+
+.searchpage{
+  //flex: ;
+}
+
+.mat-card-sm-image{
+  border-radius: 5px;
 }
 
