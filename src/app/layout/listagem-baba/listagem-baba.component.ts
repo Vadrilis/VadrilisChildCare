@@ -13,15 +13,13 @@ export class ListagemBabaComponent implements OnInit {
 
   babysitters: Array<Babysitter>;
   rating = 0;
-  longText = `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
-  from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-  originally bred for hunting.`;
+
   constructor(private babysitterService: BabysitterService, private roteador: Router) {
   }
 
   ngOnInit(): void {
     this.babysitterService.listar().subscribe(
-      babysitters => this.babysitters = babysitters,
+      babysittersz => this.babysitters = babysittersz,
       erro => {
         alert(erro.message);
       }

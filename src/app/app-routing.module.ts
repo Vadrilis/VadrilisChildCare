@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path:'listarbabysitter',
-    component: ListagemBabaComponent
+    component: CadastroComponent
   },
   {
     path: '',

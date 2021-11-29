@@ -4,7 +4,7 @@ import {Avaliacao} from "./avaliacao";
 export class Babysitter {
   nome: string;
   cpf: string;
-  dataAniversario: Date;
+  //dataAniversario: string;
   telefone: string;
   cep: string;
   num: string;
@@ -12,9 +12,9 @@ export class Babysitter {
   descricao: string;
   emailz: string;
   senha: string;
-  avaliacoes: Array<Avaliacao>;
+  //avaliacoes: Array<Avaliacao>;
 
-  /*constructor(emailz:string, senha:string, nome:string, cpf:string, telefone:string, cep:string,  num: string, complemento:string, dataAniversario: Date, descricao:string ) {
+  constructor(emailz:string, senha:string, nome:string, cpf:string, telefone:string, cep:string,  num: string, complemento:string, descricao:string ) {
     this.emailz = emailz;
     this.senha= senha;
     this.nome = nome;
@@ -23,13 +23,13 @@ export class Babysitter {
     this.cep = cep;
     this.num = num;
     this.complemento = complemento;
-    this.dataAniversario = dataAniversario;
-    this.avaliacoes = [];
+    //this.dataAniversario = dataAniversario;
+    //this.avaliacoes = [];
     this.descricao = descricao;
   }
 
 
-  get nome(): string {
+  /*get nome(): string {
     return this._nome;
   }
 

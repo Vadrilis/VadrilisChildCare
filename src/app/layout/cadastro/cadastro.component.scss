@@ -54,9 +54,15 @@ mat-form-field mat-icon {
   color: darkgrey;
 }
 
+.colocbakg{
+  padding-top: 0px;
+  margin-top: 0px;
+  background-image: url("https://github.com/lAlissial/jsonzitotwo/blob/main/imagempsite3.jpg?raw=true");
+}
+
 // LISTAGEM
-.example-card {
-  max-width: 400px;
+.cardjuk {
+  max-width: 100px;
 }
 
 ngb-rating {

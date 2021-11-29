@@ -1,4 +1,5 @@
-<div>
+<app-menu></app-menu>
+<div class="colocbakg">
   <div class="cdt-page">
     <mat-card class="mat-elevation-z12">
       <mat-card-title style="text-align:center;">Cadastro</mat-card-title>
@@ -11,27 +12,25 @@
               <mat-divider> </mat-divider>
               <br>
               <mat-form-field>
+                <mat-label>Digite seu email</mat-label>
                 <input
                   matInput
-                  [(ngModel)]="babysitter.emailz"
-                  placeholder="Email"
-                  required
-                  >
-                  <!--name="emailbaba"
-                  ngModel
-                  #emailbaba="ngModel"
-                <mat-error *ngIf="emailbaba.invalid">Informe um email válido</mat-error>-->
+                  #emailbaba  maxlength="45" placeholder="Ex.: info@gmail.com" [formControl]="email" required>
+                  <!--[(ngModel)]="babysitter.emailz"-->
+                <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
+                <mat-hint align="end">{{emailbaba.value?.length || 0}}/10</mat-hint>
                 <mat-icon matSuffix>email</mat-icon>
               </mat-form-field>
 
               <mat-form-field>
+                <mat-label>Digite sua senha</mat-label>
                 <input
                   matInput
-                  [(ngModel)]="babysitter.senha"
                   placeholder="Senha"
-                  type="password"
                   required
-                  minlength="5">
+                  #senhazitababa
+                  [type]="hide ? 'password' : 'text'">
+                  <!--[(ngModel)]="babysitter.senha" -->
                   <!--name="senhazitababa"
                   ngModel
                   #senhazitababa="ngModel"
@@ -43,7 +42,9 @@
                   *ngIf="senhazitababa.errors && senhazitababa.errors.minlength">
                   A senha deve ter no mínimo 5
                 </mat-error>-->
-                <mat-icon matSuffix>lock</mat-icon>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
               </mat-form-field>
               <br>
               <mat-divider> </mat-divider>
@@ -53,9 +54,10 @@
               <mat-form-field>
                 <input
                   matInput
-                  [(ngModel)]="babysitter.nome"
                   placeholder="Nome completo"
-                  required>
+                  required
+                  #namebaba>
+                <!--[(ngModel)]="babysitter.nome" -->
                 <!--name="usernamebaba"
                 ngModel
                 #usernamebaba="ngModel"
@@ -69,9 +71,10 @@
             <mat-form-field>
               <input
                 matInput
-                [(ngModel)]="babysitter.cpf"
                 placeholder="123.456.789-01"
-                required>
+                required
+                #cpfzitobaba>
+              <!--[(ngModel)]="babysitter.cpf" -->
                 <!--name="cpfzitobaba"
                 ngModel
                 #cpfzitobaba="ngModel"
@@ -87,9 +90,10 @@
               <span matPrefix>+55 83 &nbsp;</span>
               <input type="tel"
                      matInput
-                     [(ngModel)]="babysitter.telefone"
                      placeholder="987123456"
-                     required>
+                     required
+                     #telbaba>
+                    <!--[(ngModel)]="babysitter.telefone" -->
                      <!--name="telbaba"
                      ngModel
                      #telbaba="ngModel"-->
@@ -98,8 +102,9 @@
             <mat-form-field>
               <mat-label>Data de aniversário</mat-label>
               <input matInput [matDatepicker]="picker"
-                     [(ngModel)]="babysitter.dataAniversario"
-                     required>
+                     required
+                     #dataanivbaba>
+              <!--[(ngModel)]="babysitter.dataAniversario"-->
               <!--name="dataanivbaba"
               ngModel
               #dataanivbaba="ngModel"-->
@@ -114,10 +119,11 @@
             <mat-form-field class="example-full-width">
               <mat-label>CEP</mat-label>
               <input matInput
-                     [(ngModel)]="babysitter.cep"
                      maxlength="8"
                      placeholder="Ex. 58300590"
-                     required>
+                     required
+                     #cepbaba>
+                    <!--[(ngModel)]="babysitter.cep" -->
                      <!--name="cepbaba"
                      ngModel
                      #cepbaba="ngModel"
@@ -128,9 +134,10 @@
             <mat-form-field class="example-full-width">
               <mat-label>Número</mat-label>
               <input matInput
-                     [(ngModel)]="babysitter.num"
                      placeholder="Ex. 100"
-                     required>
+                     required
+                     #numbaba>
+                    <!-- [(ngModel)]="babysitter.num" -->
                      <!--name="numbaba"
                      ngModel
                      #numbaba="ngModel"-->
@@ -139,9 +146,10 @@
             <mat-form-field class="example-full-width">
               <mat-label>Complemento</mat-label>
               <input matInput
-                     [(ngModel)]="babysitter.complemento"
                      placeholder="Ex. Apto 90 Bloco A"
-                     required>
+                     required
+                     #complbaba>
+              <!--[(ngModel)]="babysitter.complemento" -->
                      <!--name="complbaba"
                      ngModel
                      #complbaba="ngModel"-->
@@ -153,13 +161,13 @@
               <mat-divider> </mat-divider>
               <br>
             <mat-form-field class="example-full-width">
-              <textarea matInput placeholder="Descrição"></textarea>
+              <textarea matInput placeholder="Descrição"  #descrc></textarea>
             </mat-form-field>
             <mat-checkbox color="warn">Lembrar-se</mat-checkbox>
             <button
               mat-raised-button
               color="primary"
-              class="cdt-button" (click)="inserirBabysitter()">
+              class="cdt-button" (click)="inserirBabysitter(emailbaba.value, senhazitababa.value, namebaba.value, cpfzitobaba.value, telbaba.value, cepbaba.value,  numbaba.value, complbaba.value, descrc.value )">
               Cadastrar
             </button>
           </form>
@@ -312,5 +320,25 @@
   </div>
 </div>
 
-<app-listagem-baba></app-listagem-baba>
+<div fxLayout="row wrap" fxLayout.lt-nd="column" class="cardzito">
+  <mat-card  *ngFor="let babysitter of babysitters" class="cardjuk">
+    <mat-card-subtitle>Paraíba</mat-card-subtitle>
+    <mat-card-title>{{ babysitter.nome }}</mat-card-title>
+    <mat-card-content>
+      <p>{{ babysitter.descricao}}</p>
+    </mat-card-content>
+    <ngb-rating [max]="5" [(rate)]="rating" [readonly]="false"></ngb-rating>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions>
+      <button mat-button>MAIS</button>
+      <button mat-button>ESCOLHER</button>
+    </mat-card-actions>
+    <mat-card-footer>
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+</div>
+
+
+
 
