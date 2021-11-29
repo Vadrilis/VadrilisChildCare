@@ -58,7 +58,7 @@ mat-form-field mat-icon {
 
 .colocbakg{
   padding-top: 10px;
-  margin-top: 0px;
+  margin-top: 0;
   background-image: url("https://github.com/lAlissial/jsonzitotwo/blob/main/imagempsite3.jpg?raw=true");
   background-size: 2000px;
   //background-position-x: center;
@@ -90,25 +90,40 @@ ngb-rating {
   background-color: #eae1fa;
 }
 
-.col-xl-6 {
-  flex: 0 0 auto;
-  width: 50%;
+.results {
+  //flex: 0 0 auto !important;
+  width: 45% !important;
 }
 
 .row {
-  flex-shrink: 0;
-  margin-top: var(--bs-gutter-y);
-  max-width: 100%;
-  padding-left: calc(var(--bs-gutter-x) * .5);
-  padding-right: calc(var(--bs-gutter-x) * .5);
-  width: 100%;
+  //flex-shrink: 0;
+  //margin-top: var(--bs-gutter-y);
+  //max-width: 100%;
+  //padding-left: calc(var(--bs-gutter-x) * .5);
+  //padding-right: calc(var(--bs-gutter-x) * .5);
+  //width: 100%;
 }
 
-.searchpage{
-  //flex: ;
-}
+/*.searchpage{
+  display: flex;
+  flex-direction: row;
+  justify-self: auto;
+
+}*/
 
 .mat-card-sm-image{
   border-radius: 5px;
 }
+.colocandoflx{
+  display: flex;
+  flex-direction: row;
+}
 
+/*------------------------------------APAGAR-----------------------------------------------------*/
+.d-inline-block {
+  display: inline-block!important;
+}
+/*-----------------------------------------------------------------------------------------------*/
+.pfvrveinamoral{
+
+}
