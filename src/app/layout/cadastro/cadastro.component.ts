@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Babysitter} from "../../../shared/model/babysitter";
-import {BabysitterService} from "../../../shared/services/babysitter.service";
+import {BabysitterFirestoreService} from "../../../shared/services/firebaseBaby.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {FormControl, Validators} from "@angular/forms";
 
@@ -18,7 +18,7 @@ export class CadastroComponent implements OnInit {
   babysitters: Array<Babysitter>;
   rating = 0;
   /////////////////////////////
-  constructor(private babysitterService: BabysitterService, private rotaAtual: ActivatedRoute, private roteador:Router) {
+  constructor(private babysitterService: BabysitterFirestoreService, private rotaAtual: ActivatedRoute, private roteador:Router) {
     //this.babysitter = new Babysitter();
   }
   getErrorMessageEmail() {
