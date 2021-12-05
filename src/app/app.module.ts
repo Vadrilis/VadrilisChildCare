@@ -13,6 +13,7 @@ import {LayoutModule} from "./layout/layout.module";
 import {HttpClientModule} from "@angular/common/http";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatDividerModule } from '@angular/material/divider';
+import {FirestoreModule} from "./firestore/firestore.module";
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { MatDividerModule } from '@angular/material/divider';
     LayoutModule,
     HttpClientModule,
     NgbModule,
-    MatDividerModule
+    MatDividerModule,
+    FirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
