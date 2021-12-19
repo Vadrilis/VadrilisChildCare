@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Babysitter} from "../../../shared/model/babysitter";
-import {BabysitterFirestoreService} from "../../../shared/services/firebaseBaby.service";
+import {Baba} from "../../../shared/model/baba";
+import {BabysitterFirestoreService} from "../../../shared/services/serviceBaba/firebaseBabaservice";
 import {ActivatedRoute, Router} from "@angular/router";
 import {FormControl, Validators} from "@angular/forms";
 
@@ -13,13 +13,13 @@ export class CadastroComponent implements OnInit {
 
   email = new FormControl('', [Validators.required, Validators.email]);
 
-  //babysitter: Babysitter;
+  //babysitter: Baba;
   /////////////////////////////
-  babysitters: Array<Babysitter>;
+  babysitters: Array<Baba>;
   rating = 0;
   /////////////////////////////
   constructor(private babysitterService: BabysitterFirestoreService, private rotaAtual: ActivatedRoute, private roteador:Router) {
-    //this.babysitter = new Babysitter();
+    //this.babysitter = new Baba();
   }
   getErrorMessageEmail() {
     if (this.email.hasError('required')) {
@@ -45,7 +45,7 @@ export class CadastroComponent implements OnInit {
         babysitterAlterada => console.log(babysitterAlterada)
       );
     } else{}*/
-    let baba = new Babysitter(emailz, senha, nome, cpf, telefone, cep,  num, complemento, descricao);
+    let baba = new Baba(emailz, senha, nome, cpf, telefone, cep,  num, complemento, descricao);
     this.babysitters.push(baba);
     this.babysitterService.inserir(baba).subscribe();
     //  babysitterInserida=> console.log(babysitterInserida)

@@ -1,30 +1,14 @@
 import {Crianca} from "./crianca";
 import {Avaliacao} from "./avaliacao";
+import {Usuario} from "./usuario";
 
-export class Babysitter {
-  nome: string;
-  cpf: string;
-  //dataAniversario: string;
-  telefone: string;
-  cep: string;
-  num: string;
-  complemento:string;
-  descricao: string;
-  emailz: string;
-  senha: string;
-  //avaliacoes: Array<Avaliacao>;
+export class Baba extends Usuario{
 
-  constructor(emailz:string, senha:string, nome:string, cpf:string, telefone:string, cep:string,  num: string, complemento:string, descricao:string ) {
-    this.emailz = emailz;
-    this.senha= senha;
-    this.nome = nome;
-    this.cpf = cpf;
-    this.telefone = telefone;
-    this.cep = cep;
-    this.num = num;
-    this.complemento = complemento;
-    //this.dataAniversario = dataAniversario;
-    //this.avaliacoes = [];
+  public avaliacoes: Array<Avaliacao>;
+  public descricao:String;
+
+  constructor(emailz:string, senha:string, nome:string, cpf:string, telefone:string, cep:string,  num: string, complemento:string, descricao:string, dataAniversario: String) {
+    super(emailz, senha, nome, cpf, telefone, cep, num, complemento, dataAniversario);
     this.descricao = descricao;
   }
 

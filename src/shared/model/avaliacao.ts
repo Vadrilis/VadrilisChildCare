@@ -1,12 +1,13 @@
-import {Babysitter} from "./babysitter";
+import {Baba} from "./baba";
 import {Responsavel} from "./responsavel";
+import {Usuario} from "./usuario";
 
 export class Avaliacao {
-  emitente: string;
-  destinatario: string;
-  mensagem:string;
+  public emitente: Usuario;
+  public destinatario: Usuario;
+  public mensagem:string;
 
-  constructor(emitente:string, destinatario:string, mensagem:string) {
+  constructor(emitente:Usuario, destinatario:Usuario, mensagem:string) {
     this.emitente = emitente;
     this.destinatario = destinatario;
     this.mensagem = mensagem;

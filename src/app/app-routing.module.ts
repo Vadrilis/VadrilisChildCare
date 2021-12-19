@@ -5,6 +5,7 @@ import { ListagemBabaComponent } from "./layout/listagem-baba/listagem-baba.comp
 import { CarouselzitoComponent } from "./layout/carouselzito/carouselzito.component";
 import { MenuComponent} from "./layout/menu/menu.component";
 import {PadrzitoComponent} from "./layout/padrzito/padrzito.component";
+import {PerfilbabaComponent} from "./layout/perfilbaba/perfilbaba.component";
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path:'listarbabysitter',
     component: CadastroComponent
+  },
+  {
+    path:'perfilbaba',
+    component: PerfilbabaComponent
   },
   {
     path: '',

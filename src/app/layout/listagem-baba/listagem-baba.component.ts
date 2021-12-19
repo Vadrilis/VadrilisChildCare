@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Babysitter} from "../../../shared/model/babysitter";
-import {BabysitterService} from "../../../shared/services/babysitter.service";
+import {Baba} from "../../../shared/model/baba";
+import {BabaService} from "../../../shared/services/serviceBaba/baba.service";
 import {Router} from "@angular/router";
 
 
@@ -11,10 +11,10 @@ import {Router} from "@angular/router";
 })
 export class ListagemBabaComponent implements OnInit {
 
-  babysitters: Array<Babysitter>;
+  babysitters: Array<Baba>;
   rating = 0;
 
-  constructor(private babysitterService: BabysitterService, private roteador: Router) {
+  constructor(private babysitterService: BabaService, private roteador: Router) {
   }
 
   ngOnInit(): void {
@@ -26,11 +26,11 @@ export class ListagemBabaComponent implements OnInit {
     );
   }
 
-  /*editar(babysitter: Babysitter):void{
+  /*editar(babysitter: Baba):void{
     this.roteador.navigate(['cadastrarbabysitter', babysitter.id]);
   }
 
-  remover(babysitter: Babysitter):void {
+  remover(babysitter: Baba):void {
     this.babysitterService.remover(babysitter.id).subscribe(
       resposta => {
         const indxBabysitterARemover = this.babysitters.findIndex(u=>u.cpf === babysitter.cpf);

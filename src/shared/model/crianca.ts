@@ -1,13 +1,17 @@
-export class Crianca{
-  nome: string;
-  dataAniversario: Date;
+import {Responsavel} from "./responsavel";
 
-  /*constructor(nome:string) {
+export class Crianca{
+  public nome: string;
+  public dataAniversario: String;
+  public responsavel: Responsavel;
+
+  constructor(nome:string, responsavel:Responsavel, dataAniversario:String) {
     this.nome = nome;
-    this.dataAniversario = new Date();
+    this.responsavel = responsavel;
+    this.dataAniversario = dataAniversario;
   }
 
-  get nome(): string {
+  /*get nome(): string {
     return this._nome;
   }
 

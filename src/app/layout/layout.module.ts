@@ -39,6 +39,8 @@ import {MatDividerModule} from "@angular/material/divider";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {NgbRatingModule} from "@ng-bootstrap/ng-bootstrap";
 import { PadrzitoComponent } from './padrzito/padrzito.component';
+import { PerfilbabaComponent } from './perfilbaba/perfilbaba.component';
+import { ComentariosgeralComponent } from './comentariosgeral/comentariosgeral.component';
 
 @NgModule({
   declarations: [
@@ -51,9 +53,11 @@ import { PadrzitoComponent } from './padrzito/padrzito.component';
     CadastroComponent,
     ListagemBabaComponent,
     PartezitaComponent,
-    PadrzitoComponent
+    PadrzitoComponent,
+    PerfilbabaComponent,
+    ComentariosgeralComponent
   ],
-  exports: [MenuComponent, MapazitoComponent, CarouselzitoComponent, CarouseldasbbstrsComponent, FooterzitoComponent, HomezitoComponent, CadastroComponent, ListagemBabaComponent,PartezitaComponent, PadrzitoComponent],
+  exports: [MenuComponent, MapazitoComponent, CarouselzitoComponent, CarouseldasbbstrsComponent, FooterzitoComponent, HomezitoComponent, CadastroComponent, ListagemBabaComponent,PartezitaComponent, PadrzitoComponent, PerfilbabaComponent],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
