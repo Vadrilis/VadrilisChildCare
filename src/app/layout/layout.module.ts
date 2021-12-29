@@ -41,6 +41,10 @@ import {NgbRatingModule} from "@ng-bootstrap/ng-bootstrap";
 import { PadrzitoComponent } from './padrzito/padrzito.component';
 import { PerfilbabaComponent } from './perfilbaba/perfilbaba.component';
 import { ComentariosgeralComponent } from './comentariosgeral/comentariosgeral.component';
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatTableModule} from "@angular/material/table";
+import {MatSortModule} from "@angular/material/sort";
+import { ListagemComentarioComponent } from './listagem-comentario/listagem-comentario.component';
 
 @NgModule({
   declarations: [
@@ -55,9 +59,10 @@ import { ComentariosgeralComponent } from './comentariosgeral/comentariosgeral.c
     PartezitaComponent,
     PadrzitoComponent,
     PerfilbabaComponent,
-    ComentariosgeralComponent
+    ComentariosgeralComponent,
+    ListagemComentarioComponent
   ],
-  exports: [MenuComponent, MapazitoComponent, CarouselzitoComponent, CarouseldasbbstrsComponent, FooterzitoComponent, HomezitoComponent, CadastroComponent, ListagemBabaComponent,PartezitaComponent, PadrzitoComponent, PerfilbabaComponent],
+  exports: [MenuComponent, MapazitoComponent, CarouselzitoComponent, CarouseldasbbstrsComponent, FooterzitoComponent, HomezitoComponent, CadastroComponent, ListagemBabaComponent,PartezitaComponent, PadrzitoComponent, PerfilbabaComponent, ComentariosgeralComponent, ListagemComentarioComponent],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
@@ -87,7 +92,10 @@ import { ComentariosgeralComponent } from './comentariosgeral/comentariosgeral.c
     RouterModule,
     MatDividerModule,
     MatProgressBarModule,
-    NgbRatingModule
+    NgbRatingModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatSortModule
   ],
   providers: [],
 })

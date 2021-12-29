@@ -6,6 +6,7 @@ import { CarouselzitoComponent } from "./layout/carouselzito/carouselzito.compon
 import { MenuComponent} from "./layout/menu/menu.component";
 import {PadrzitoComponent} from "./layout/padrzito/padrzito.component";
 import {PerfilbabaComponent} from "./layout/perfilbaba/perfilbaba.component";
+import {ListagemComentarioComponent} from "./layout/listagem-comentario/listagem-comentario.component";
 
 const routes: Routes = [
   {
@@ -19,6 +20,18 @@ const routes: Routes = [
   {
     path:'perfilbaba',
     component: PerfilbabaComponent
+  },
+  {
+    path:'listagembabasemtabela',
+    component: ListagemBabaComponent
+  },
+  {
+    path:'listagembabasemtabela/:id',
+    component: PerfilbabaComponent
+  },
+  {
+    path:'listagemcomentariosemtabela',
+    component: ListagemComentarioComponent
   },
   {
     path: '',

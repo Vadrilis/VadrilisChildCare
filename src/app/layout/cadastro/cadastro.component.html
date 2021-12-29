@@ -109,7 +109,7 @@
               ngModel
               #dataanivbaba="ngModel"-->
               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
+              <mat-datepicker></mat-datepicker>
             </mat-form-field>
               <br>
               <mat-divider> </mat-divider>
@@ -167,7 +167,7 @@
             <button
               mat-raised-button
               color="primary"
-              class="cdt-button" (click)="inserirBabysitter(emailbaba.value, senhazitababa.value, namebaba.value, cpfzitobaba.value, telbaba.value, cepbaba.value,  numbaba.value, complbaba.value, descrc.value )">
+              class="cdt-button" (click)="inserirBaba(emailbaba, senhazitababa, namebaba, cpfzitobaba, telbaba, cepbaba,  numbaba, complbaba, descrc, dataanivbaba)">
               Cadastrar
             </button>
           </form>
@@ -327,7 +327,7 @@
       <article>
         <h1 class="ajkt" id="listagemzita">ENCONTRE UMA BABÁ</h1>
           <div class="cardszitos">
-            <mat-card  *ngFor="let babysitter of babysitters" class="cardjuk">
+            <mat-card  *ngFor="let babysitter of babas" class="cardjuk">
               <mat-card-title-group>
                 <mat-card-subtitle>Paraíba</mat-card-subtitle>
                 <mat-card-title>{{ babysitter.nome }}</mat-card-title>

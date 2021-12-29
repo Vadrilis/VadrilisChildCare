@@ -1,1 +1,51 @@
-<p>comentariosgeral works!</p>
+<div class="meiozn">
+  <h1>Envie-nos um recado</h1>
+  <div class="example-container">
+    <mat-card class="mat-elevation-z6">
+      <mat-card-content class="cent_mddl">
+        <mat-form-field  appearance="fill">
+          <mat-label>E-mail</mat-label>
+          <input #email matInput placeholder="lorem@ipsulum.com" formControlName="email">
+
+        </mat-form-field>
+        <mat-form-field  appearance="fill">
+          <mat-label>Comentário</mat-label>
+          <textarea #comment formControlName="comentarios" matInput></textarea>
+
+        </mat-form-field>
+        <div class="cent_bt">
+          <button
+            type="submit"
+            mat-raised-button
+            mat-icon-button
+            (click)="inserirComentario(email, comment)"
+          >
+            <mat-icon>email</mat-icon>
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<!--<div class="reg_comentarios">
+  <mat-card class="cardDoComentario" *ngFor="let comentario of comentarios">
+    <mat-card-subtitle> </mat-card-subtitle>
+    <mat-card-title>{{comentario.emailq}}</mat-card-title>
+    <mat-card-content>
+      <p> </p>
+      <p>{{comentario.mensagem}}</p>
+    </mat-card-content>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions>
+      <p></p>
+    </mat-card-actions>
+    <mat-card-footer>
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+</div>-->
+
+
+
+

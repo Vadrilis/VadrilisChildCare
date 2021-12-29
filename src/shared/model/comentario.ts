@@ -1,9 +1,10 @@
 export class Comentario {
-  public emailq: string;
+  public id: number;
+  public mail: string;
   public mensagem: string;
 
   constructor(emailq: string, mensagem: string) {
-    this.emailq = emailq;
+    this.mail = emailq;
     this.mensagem = mensagem;
   }
 }

@@ -3,6 +3,7 @@ import {Responsavel} from "./responsavel";
 import {Usuario} from "./usuario";
 
 export class Avaliacao {
+  public id: number;
   public emitente: Usuario;
   public destinatario: Usuario;
   public mensagem:string;

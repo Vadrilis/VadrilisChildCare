@@ -1,6 +1,7 @@
 import {Responsavel} from "./responsavel";
 
 export class Crianca{
+  public id: number;
   public nome: string;
   public dataAniversario: String;
   public responsavel: Responsavel;

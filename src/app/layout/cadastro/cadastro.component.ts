@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Baba} from "../../../shared/model/baba";
-import {BabysitterFirestoreService} from "../../../shared/services/serviceBaba/firebaseBabaservice";
+import { BabaService } from "../../../shared/services/serviceBaba/baba.service";
+
 import {ActivatedRoute, Router} from "@angular/router";
 import {FormControl, Validators} from "@angular/forms";
 
@@ -15,10 +16,11 @@ export class CadastroComponent implements OnInit {
 
   //babysitter: Baba;
   /////////////////////////////
-  babysitters: Array<Baba>;
+  babas: Array<Baba>;
   rating = 0;
   /////////////////////////////
-  constructor(private babysitterService: BabysitterFirestoreService, private rotaAtual: ActivatedRoute, private roteador:Router) {
+
+  constructor(private babaService: BabaService, private rotaAtual: ActivatedRoute, private roteador:Router) {
     //this.babysitter = new Baba();
   }
   getErrorMessageEmail() {
@@ -31,23 +33,23 @@ export class CadastroComponent implements OnInit {
   hide = true;
 
   ngOnInit(): void {
-    this.babysitterService.listar().subscribe(
-      babysittersz => this.babysitters = babysittersz,
+    this.babaService.listarBabas().subscribe(
+      babysittersz => this.babas = babysittersz,
       erro => {
         alert(erro.message);
       }
     );
   }
 
-  inserirBabysitter(emailz:string, senha:string, nome:string, cpf:string, telefone:string, cep:string, num: string, complemento:string, descricao:string ):void {
+  inserirBaba(emailz:HTMLInputElement, senha:HTMLInputElement, nome:HTMLInputElement, cpf:HTMLInputElement, telefone:HTMLInputElement, cep:HTMLInputElement, num:HTMLInputElement, complemento:HTMLInputElement, descricao: HTMLTextAreaElement, dataAniv:HTMLInputElement):void {
     /*if(this.babysitter.id){
       this.babysitterService.atualizar(this.babysitter).subscribe(
         babysitterAlterada => console.log(babysitterAlterada)
       );
     } else{}*/
-    let baba = new Baba(emailz, senha, nome, cpf, telefone, cep,  num, complemento, descricao);
-    this.babysitters.push(baba);
-    this.babysitterService.inserir(baba).subscribe();
+    let baba = new Baba(emailz.value, senha.value, nome.value, cpf.value, telefone.value, cep.value,  num.value, complemento.value, descricao.value , dataAniv.value);
+    this.babas.push(baba);
+    this.babaService.inserirBaba(baba).subscribe();
     //  babysitterInserida=> console.log(babysitterInserida)
     //);
 

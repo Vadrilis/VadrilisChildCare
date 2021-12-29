@@ -13,23 +13,23 @@ export class BabaService {
   constructor(private httpClient:HttpClient) {
   }
 
-  listar(): Observable<Baba[]>{
+  listarBabas(): Observable<Baba[]>{
     return this.httpClient.get<Baba[]>(this.URL_BABAS);/*.pipe(catchError(erro=>{
       console.log(erro);
       return of(undefined);
     }));*/
   }
 
-  inserir(baba: Baba): Observable<Baba>{
+  inserirBaba(baba: Baba): Observable<Baba>{
     return this.httpClient.post<Baba>(this.URL_BABAS, baba);
   }
 
-  /*remover(id: number): Observable<object> {
-    return this.httpClient.delete(`${this.URL_BABYSITTERS}/${id}`);
+  remover(id: number): Observable<object> {
+    return this.httpClient.delete(`${this.URL_BABAS}/${id}`);
   }
 
   pesquisarPorId(id:number): Observable<Baba>{
-    return this.httpClient.get<Baba>(`${this.URL_BABYSITTERS}/${id}`);
-  }*/
+    return this.httpClient.get<Baba>(`${this.URL_BABAS}/${id}`);
+  }
 
 }

@@ -19,4 +19,12 @@ export class CriancaService {
   inserirCrianca(cri: Crianca): Observable<Crianca> {
     return this.httpClient.post<Crianca>(this.URL_CRIANCA, cri);
   }
+
+  atualizarCrianca(criac: Crianca): Observable<Crianca> {
+    return this.httpClient.put<Crianca>(`${this.URL_CRIANCA}/${criac.id}`, criac);
+  }
+
+  removerCrianca(id: number): Observable<object> {
+    return this.httpClient.delete(`${this.URL_CRIANCA}/${id}`);
+  }
 }
