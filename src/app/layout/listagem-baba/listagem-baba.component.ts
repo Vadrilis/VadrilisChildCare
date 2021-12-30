@@ -8,6 +8,7 @@ import {MatTableDataSource} from "@angular/material/table";
 import {AfterViewInit, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
+import {Comentario} from "../../../shared/model/comentario";
 
 
 
@@ -19,11 +20,11 @@ import {MatSort} from '@angular/material/sort';
 })
 export class ListagemBabaComponent implements OnInit {
   dataSource: MatTableDataSource<Baba>;
-  displayedColumns = ['nome','dataAniversario', 'cep', 'descricao', ' '];
+  displayedColumns = ['nome','dataAniversario', 'cep', 'descricao', 'id'];
 
   //constructor(private babaService: BabaService){}
 
-
+  baba:Baba;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -31,7 +32,7 @@ export class ListagemBabaComponent implements OnInit {
   constructor(private babaService: BabaService, private roteador: Router, private rotaAtual: ActivatedRoute) {
     /*if (this.rotaAtual.snapshot.paramMap.has('id')){
       const idParaDetalhar = Number(this.rotaAtual.snapshot.paramMap.get('id'));
-      this.babaService.pesquisarPorId(idParaDetalhar).subscribe(babaRetornada => this.baba = babaRetornada);
+      this.babaService.pesquisarPorId(idParaDetalhar).subscribe(babaRetornada => this.baba=babaRetornada);
     }*/
   }
 
@@ -46,6 +47,9 @@ export class ListagemBabaComponent implements OnInit {
   }
 
   detalhar(bab: Baba):void{
+    //this.babaService.pesquisarPorId(bab.id);
+    /*this.babaService.getBabaporId(bab.id).subscribe(
+    );*/
     this.roteador.navigate(['listagembabasemtabela', bab.id]);
   }
 

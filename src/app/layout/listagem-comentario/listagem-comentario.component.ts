@@ -8,8 +8,7 @@ import {MatTableDataSource} from "@angular/material/table";
 import {AfterViewInit, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
-import {Baba} from "../../../shared/model/baba";
-import {BabaService} from "../../../shared/services/serviceBaba/baba.service";
+
 
 @Component({
   selector: 'app-listagem-comentario',

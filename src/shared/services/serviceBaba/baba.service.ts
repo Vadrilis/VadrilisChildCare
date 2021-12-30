@@ -32,4 +32,7 @@ export class BabaService {
     return this.httpClient.get<Baba>(`${this.URL_BABAS}/${id}`);
   }
 
+  /*atualizar(baba: Baba): Observable<Baba> {
+    return this.httpCliente.put<Baba(`${this.URL_BABAS}/${baba.id}`, baba);
+  }*/
 }
