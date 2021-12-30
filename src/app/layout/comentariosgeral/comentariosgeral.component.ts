@@ -3,7 +3,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import { Comentario } from "../../../shared/model/comentario";
 import { ComentarioService } from "../../../shared/services/serviceComentario/comentario.service";
 import {ActivatedRoute, Router} from "@angular/router";
-
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-comentariosgeral',
@@ -11,13 +11,13 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./comentariosgeral.component.scss']
 })
 export class ComentariosgeralComponent implements OnInit {
+  durationInSeconds = 5;
   comentarios = new Array<Comentario>();
 
 
   constructor(private comentarioService: ComentarioService, private rotaAtual: ActivatedRoute, private roteador:Router) {
 
   }
-
 
   ngOnInit(): void {
     this.comentarioService.listarComentarios().subscribe(

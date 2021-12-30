@@ -8,6 +8,7 @@ import {MatTableDataSource} from "@angular/material/table";
 import {AfterViewInit, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
+import {Baba} from "../../../shared/model/baba";
 
 
 @Component({
@@ -18,7 +19,7 @@ import {MatSort} from '@angular/material/sort';
 export class ListagemComentarioComponent implements OnInit {
 
   dataSource: MatTableDataSource<Comentario>;
-  displayedColumns = ['mail','mensagem'];
+  displayedColumns = ['mail','mensagem', 'att', 'del'];
 
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -49,4 +50,12 @@ export class ListagemComentarioComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
+
+  // atualizar(comt: Comentario) {
+  //
+  // }
+  //
+  // deletar(comt: Comentario) {
+  //
+  // }
 }
