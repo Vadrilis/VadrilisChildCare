@@ -80,7 +80,7 @@ import { ComentarioindividualpeditComponent } from './comentarioindividualpedit/
     //MDBBootstrapModule,
     FormsModule,
     AgmCoreModule.forRoot({
-      apiKey: '',
+      apiKey: 'AIzaSyBWxOxl9SDbOzQm-Ih8Ko14F52Qkz8WEx8',
     }),
     //MdbCollapseModule,
     CardsModule,

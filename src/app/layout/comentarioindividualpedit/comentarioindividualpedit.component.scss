@@ -1,0 +1,45 @@
+.meiozn {
+  justify-content: center;
+  background-color: #fef7ff;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+.example-container mat-card {
+  background-color: rgba(209, 155, 255, 0.78);
+  filter: opacity(95%);
+  //z-index: 5;
+  width: 30vw;
+  //min-width: fit-content;
+  margin: 10% auto;
+  border-radius: 8px;
+}
+mat-card-title {
+  //text-align: center;
+  //margin: 1rem 0 1rem 0 ;
+}
+
+mat-form-field, mat-checkbox {
+  width: 80%;
+  //display: block;
+  //margin-bottom: 0.5rem;
+}
+
+mat-card-content {
+  //margin-top: 1rem;
+}
+
+.cent_mddl {
+  //display: flex;
+  //flex-direction: column;
+  //align-items: center;
+}
+
+.cent_bt button {
+  border-radius: 3px;
+  width: 3rem;
+}
+
+.mat-card-header {
+  display: inline !important;
+}

@@ -9,6 +9,7 @@ ngb-rating {
 
 table {
   width: 100%;
+
 }
 
 .mat-form-field {
@@ -19,3 +20,14 @@ table {
 td, th {
   width: 25%;
 }
+
+.margemcorarrendt{
+  margin: 1rem 1rem;
+}
+
+th{
+  background-color: rgba(227, 191, 255, 0.61) !important;
+  font-weight: bold !important;
+  color: black;
+}
+
