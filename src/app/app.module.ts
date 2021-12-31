@@ -14,11 +14,14 @@ import {HttpClientModule} from "@angular/common/http";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatDividerModule } from '@angular/material/divider';
 import {FirestoreModule} from "./firestore/firestore.module";
+import { InterceptorModule } from './interceptor/interceptor.module';
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,9 @@ import {FirestoreModule} from "./firestore/firestore.module";
     HttpClientModule,
     NgbModule,
     MatDividerModule,
-    FirestoreModule
+    FirestoreModule,
+    InterceptorModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

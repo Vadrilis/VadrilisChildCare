@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import { Comentario } from "../../../shared/model/comentario";
 import { ComentarioService } from "../../../shared/services/serviceComentario/comentario.service";
+import { MensagemService } from "../../../shared/services/serviceMensagem/mensagem.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-comentariosgeral',
@@ -14,9 +14,11 @@ export class ComentariosgeralComponent implements OnInit {
   durationInSeconds = 5;
   comentarios = new Array<Comentario>();
 
+  comentario:Comentario;
 
-  constructor(private comentarioService: ComentarioService, private rotaAtual: ActivatedRoute, private roteador:Router) {
+  operacaoCadastro = true;
 
+  constructor(private comentarioService: ComentarioService, private rotaAtual: ActivatedRoute, private roteador:Router, private mensagemService: MensagemService) {
   }
 
   ngOnInit(): void {
@@ -26,11 +28,19 @@ export class ComentariosgeralComponent implements OnInit {
   }
 
   inserirComentario(emailelemt: HTMLInputElement, comtrlemt: HTMLTextAreaElement) {
-    if (emailelemt.value && comtrlemt.value) {
-      let comment = new Comentario(emailelemt.value, comtrlemt.value);
-      this.comentarios.push(comment);
-      this.comentarioService.inserirComentario(comment).subscribe();
-    }
+    /*if(this.comentario.id){
+      this.comentarioService.atualizarComentario(this.comentario).subscribe(comentarioAlterado => {
+        this.mensagemService.success('Comentário alterado com sucesso!');
+        this.roteador.navigate(['listagemcomentariosemtabela']);
+      })
+    } else{*/
+      if (emailelemt.value && comtrlemt.value) {
+        let comment = new Comentario(emailelemt.value, comtrlemt.value);
+        this.comentarios.push(comment);
+        this.comentarioService.inserirComentario(comment).subscribe();
+        this.mensagemService.success('Comentário cadastrado com sucesso!');
+      }
+    //}
   }
 }
 

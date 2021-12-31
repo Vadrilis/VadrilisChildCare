@@ -7,6 +7,7 @@ import { MenuComponent} from "./layout/menu/menu.component";
 import {PadrzitoComponent} from "./layout/padrzito/padrzito.component";
 import {PerfilbabaComponent} from "./layout/perfilbaba/perfilbaba.component";
 import {ListagemComentarioComponent} from "./layout/listagem-comentario/listagem-comentario.component";
+import {ComentarioindividualpeditComponent} from "./layout/comentarioindividualpedit/comentarioindividualpedit.component";
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path:'listagembabasemtabela/:id',
     component: PerfilbabaComponent
+  },
+  {
+    path:'comentarioindividualpedit/:id',
+    component: ComentarioindividualpeditComponent
   },
   {
     path:'listagemcomentariosemtabela',

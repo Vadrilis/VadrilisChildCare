@@ -1,0 +1,19 @@
+<mat-card class="mat-card-simples">
+  <mat-card-header>
+    <mat-card-title>
+      <mat-icon>person</mat-icon>
+      <mat-form-field>
+        <input matInput #mailcomt [(ngModel)]="comentario.mail">
+      </mat-form-field>
+    </mat-card-title>
+    <mat-card-subtitle>Comentário do nosso visitante</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field>
+      <input matInput #msgcomt [(ngModel)]="comentario.mensagem">
+    </mat-form-field>
+  </mat-card-content>
+  <button mat-raised-button mat-icon-button color="primary" (click)="atualizarComentario()">
+    <mat-icon>save_as</mat-icon>
+  </button>
+</mat-card>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Baba} from "../../../shared/model/baba";
 import { BabaService } from "../../../shared/services/serviceBaba/baba.service";
+import { MensagemService } from "../../../shared/services/serviceMensagem/mensagem.service";
 
 import {ActivatedRoute, Router} from "@angular/router";
 import {FormControl, Validators} from "@angular/forms";
@@ -20,7 +21,7 @@ export class CadastroComponent implements OnInit {
   rating = 0;
   /////////////////////////////
 
-  constructor(private babaService: BabaService, private rotaAtual: ActivatedRoute, private roteador:Router) {
+  constructor(private babaService: BabaService, private rotaAtual: ActivatedRoute, private roteador:Router, private mensagemService: MensagemService) {
     //this.babysitter = new Baba();
   }
   getErrorMessageEmail() {
@@ -50,6 +51,9 @@ export class CadastroComponent implements OnInit {
     let baba = new Baba(emailz.value, senha.value, nome.value, cpf.value, telefone.value, cep.value,  num.value, complemento.value, descricao.value , dataAniv.value);
     this.babas.push(baba);
     this.babaService.inserirBaba(baba).subscribe();
+    this.mensagemService.success('Cadastro feito com sucesso!');
+    this.mensagemService.error('Erro, falha no cadastro da babá!');
+
     //  babysitterInserida=> console.log(babysitterInserida)
     //);
 

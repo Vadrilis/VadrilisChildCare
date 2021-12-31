@@ -45,6 +45,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
 import { ListagemComentarioComponent } from './listagem-comentario/listagem-comentario.component';
+import { ComentarioindividualpeditComponent } from './comentarioindividualpedit/comentarioindividualpedit.component';
 
 @NgModule({
   declarations: [
@@ -60,9 +61,10 @@ import { ListagemComentarioComponent } from './listagem-comentario/listagem-come
     PadrzitoComponent,
     PerfilbabaComponent,
     ComentariosgeralComponent,
-    ListagemComentarioComponent
+    ListagemComentarioComponent,
+    ComentarioindividualpeditComponent
   ],
-  exports: [MenuComponent, MapazitoComponent, CarouselzitoComponent, CarouseldasbbstrsComponent, FooterzitoComponent, HomezitoComponent, CadastroComponent, ListagemBabaComponent,PartezitaComponent, PadrzitoComponent, PerfilbabaComponent, ComentariosgeralComponent, ListagemComentarioComponent],
+  exports: [MenuComponent, MapazitoComponent, CarouselzitoComponent, CarouseldasbbstrsComponent, FooterzitoComponent, HomezitoComponent, CadastroComponent, ListagemBabaComponent,PartezitaComponent, PadrzitoComponent, PerfilbabaComponent, ComentariosgeralComponent, ListagemComentarioComponent, ComentarioindividualpeditComponent],
   imports: [
     CommonModule,
     BrowserAnimationsModule,

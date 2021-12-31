@@ -24,7 +24,7 @@ export class BabaService {
     return this.httpClient.post<Baba>(this.URL_BABAS, baba);
   }
 
-  remover(id: number): Observable<object> {
+  removerBaba(id: number): Observable<object> {
     return this.httpClient.delete(`${this.URL_BABAS}/${id}`);
   }
 
